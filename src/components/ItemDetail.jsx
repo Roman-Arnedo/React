@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import {Card, CardBody, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button} from '@chakra-ui/react'
+import UseCounter  from './UseCounter'
 
 const ItemDetail = ({productos}) => {
 
@@ -26,12 +27,8 @@ const ItemDetail = ({productos}) => {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blue'>
-                    Buy now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                    Add to cart
-                </Button>
+                    <UseCounter/>
+              
                 </ButtonGroup>
             </CardFooter>
             </Card>

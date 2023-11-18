@@ -1,17 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import {Card, CardBody, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button} from '@chakra-ui/react'
+import UseCounter from './UseCounter'
 
 
 const ItemCategory = ({productos}) => {
-
+    const {id}= useParams()
     const {category}= useParams()
 
     const categoriaFiltrada = productos.filter((productos) => productos.category == category)
-    
-    console.log(categoriaFiltrada)
-    console.log("Categoría obtenida:", category);
-    console.log("Productos:", productos);
 
   return (
     <>
@@ -32,12 +29,7 @@ const ItemCategory = ({productos}) => {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blue'>
-                    Buy now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                    Add to cart
-                </Button>
+                    <UseCounter/>
                 </ButtonGroup>
             </CardFooter>
             </Card>

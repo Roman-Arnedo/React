@@ -24,19 +24,19 @@ const Navbar = ({category}) => {
         <MenuList>
 
             <MenuItem>
-            <Link to={`/productos/${category}`}>A</Link>
+            <Link to={`/productos/category/${'A'}`}>Category A</Link>
             </MenuItem>
 
             <MenuItem>
-            <Link to={`/productos/${category}`}>B</Link>
+            <Link to={`/productos/category/${'B'}`}>Category B</Link>
             </MenuItem>
 
             <MenuItem>
-            <Link to={`/productos/${category}`}>C</Link>
+            <Link to={`/productos/category/${'C'}`}>Category C</Link>
             </MenuItem>
 
             <MenuItem>
-            <Link to={`/productos/${category}`}>D</Link>
+            <Link to={`/productos/category/${'D'}`}>Category D</Link>
             </MenuItem>
 
         </MenuList>

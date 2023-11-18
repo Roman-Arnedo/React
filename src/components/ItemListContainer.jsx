@@ -1,8 +1,11 @@
 import React from 'react'
 import ItemList from './ItemList'
+import { useParams } from 'react-router-dom'
+
 
 const itemListContainer = () => {
-    
+  const { category }=useParams()
+
   const productos = [
 
     { id: "1", name: "Producto A", description: "Descripcion del producto A", stock: 10, price: 2000, category: 'A' },
@@ -30,9 +33,13 @@ const itemListContainer = () => {
             console.log(error)
         })
 
+    const filtered = productos.filter((producto)=> producto.category === category)
+
   return (
     <div>
     <ItemList productos={productos}/>
+
+    <ItemList productos={filtered}/>
     </div>
   )
 }

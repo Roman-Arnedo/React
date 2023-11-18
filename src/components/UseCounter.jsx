@@ -1,21 +1,26 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+import { Flex, Box, Button, Spacer } from '@chakra-ui/react';
 
-const useCounter = (initialValue = 0, step = 1) => {
-    const [count, setCount]= useState(initialValue)
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
-    const increment = ()=>{
-        setCount((previousCount) => previousCount + step)
-    }
+  return (
+    <Flex>
+      <Box>
+        <Button variant="outline" colorScheme="teal" m={1}>
+          -
+        </Button>
+        <Button m={1}>{count}</Button>
+        <Button variant="outline" colorScheme="teal" m={1}>
+          +
+        </Button>
+      </Box>
+      <Spacer />
+      <Box>
+        <Button>Add to cart</Button>
+      </Box>
+    </Flex>
+  );
+};
 
-    const decrement =()=>{
-        setCount((previousCount)=> previousCount - step)
-    }
-
-    return{
-        count,
-        increment,
-        decrement
-    }
-}
-
-export default useCounter
+export default Counter;

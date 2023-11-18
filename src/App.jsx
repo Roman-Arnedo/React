@@ -10,16 +10,15 @@ function App() {
   return(
     <div>
       <BrowserRouter>
-
+        
         <Navbar/>
-
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/cart' element={<Cart/>}/>
           <Route exact path='/productos/:id' element={<ItemDetailContainer/>}/>
           <Route exact path='/productos/category/:category' element={<ItemDetailContainer/>}/>
         </Routes>
-
+        
       </BrowserRouter>
     </div>
   )

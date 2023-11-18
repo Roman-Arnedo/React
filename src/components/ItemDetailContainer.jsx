@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
 import ItemCategory from './ItemCategory'
+import ItemList from './ItemList'
 
 const ItemDetailContainer = () => {
 
